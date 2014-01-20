@@ -86,6 +86,7 @@ typedef enum {
     else {
         LoginViewController *vc = [[[LoginViewController alloc] init] initWithNibName:nil bundle:nil];
         KKNavigationController *nvc = [[KKNavigationController alloc] initWithRootViewController:vc];
+        nvc.navigationBar.translucent = NO;
         [self.navigationController presentModalViewController:nvc animated:YES];
     }
 }

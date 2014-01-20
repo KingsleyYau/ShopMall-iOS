@@ -170,45 +170,31 @@ typedef enum {
         NSValue *value = [dictionarry valueForKey:ROW_SIZE];
         [value getValue:&viewSize];
         
+        CenteralDetailTextTableViewCell *cell = [CenteralDetailTextTableViewCell getUITableViewCell:tableView];
+        result = cell;
+        cell.backgroundColor = [UIColor whiteColor];
+        
         // TODO:类型
         RowType type = (RowType)[[dictionarry valueForKey:ROW_TYPE] intValue];
         switch (type) {
             case RowTypeAbout:{
-                CenteralDetailTextTableViewCell *cell = [CenteralDetailTextTableViewCell getUITableViewCell:tableView];
-                result = cell;
-                
                 cell.detailLabel.text = @"Shopla的成立年份，公司背景，成立目标和合作伙伴等。其他简介有待填充，让介绍来得更猛烈些吧。";
             }break;
             case RowTypeVersion:{
-                CenteralDetailTextTableViewCell *cell = [CenteralDetailTextTableViewCell getUITableViewCell:tableView];
-                result = cell;
-                
                 NSDictionary* infoDict =[[NSBundle mainBundle] infoDictionary];
                 NSString *version =[infoDict objectForKey:@"CFBundleVersion"];
                 cell.detailLabel.text = [NSString stringWithFormat:@"软件版本：%@", version];
             }break;
             case RowTypePhone:{
-                CenteralDetailTextTableViewCell *cell = [CenteralDetailTextTableViewCell getUITableViewCell:tableView];
-                result = cell;
-
                 cell.detailLabel.text = @"客服电话：020-88888888";
             }break;
             case RowTypeLink:{
-                CenteralDetailTextTableViewCell *cell = [CenteralDetailTextTableViewCell getUITableViewCell:tableView];
-                result = cell;
-
                 cell.detailLabel.text = @"网址：www.shopla.com";
             }break;
             case RowTypeMapData:{
-                CenteralDetailTextTableViewCell *cell = [CenteralDetailTextTableViewCell getUITableViewCell:tableView];
-                result = cell;
-
                 cell.detailLabel.text = @"下载港澳离线地图";
             }break;
             case RowTypeClean:{
-                CenteralDetailTextTableViewCell *cell = [CenteralDetailTextTableViewCell getUITableViewCell:tableView];
-                result = cell;
-                
                 cell.detailLabel.text = @"清除缓存";
             }break;
             default:break;

@@ -9,6 +9,12 @@
 #import "CustomTabBar.h"
 #import "ResourceManager.h"
 @implementation UITabBar (Custom)
+- (void)layoutSubviews {
+    [super layoutSubviews];
+}
+- (void)awakeFromNib {
+    [super awakeFromNib];
+}
 - (void)drawRect:(CGRect)rect
 {
 //    NSString *crrSysVer = [[UIDevice currentDevice] systemVersion];

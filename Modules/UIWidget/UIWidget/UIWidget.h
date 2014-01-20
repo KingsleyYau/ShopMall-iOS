@@ -58,6 +58,8 @@
 
 #import "KKSearchBar.h"
 
+
+#import "CustomTabBar.h"
 #import "KKTabBar.h"
 #import "KKTabBarItem.h"
 

@@ -61,11 +61,14 @@
 
     KKNavigationController *nvc = (KKNavigationController *)self.window.rootViewController;
     nvc.isCustomNoTitleBackButton = YES;
-
-    NSMutableDictionary *titleTextAttributes = [NSMutableDictionary dictionary];
-    [titleTextAttributes setValue:(id)[[UIColor whiteColor] CGColor] forKey:(NSString*)kCTForegroundColorAttributeName];
-    [nvc.navigationBar setTitleTextAttributes:titleTextAttributes];
-    [UINavigationBar appearance];
+//
+//    MainTabBarController *tvc = [nvc.viewControllers objectAtIndex:0];
+//    CGRect frame = tvc.tabBar.frame;
+//    int a = 0;
+//    NSMutableDictionary *titleTextAttributes = [NSMutableDictionary dictionary];
+//    [titleTextAttributes setValue:(id)[[UIColor whiteColor] CGColor] forKey:(NSString*)kCTForegroundColorAttributeName];
+//    [nvc.navigationBar setTitleTextAttributes:titleTextAttributes];
+//    [UINavigationBar appearance];
     return YES;
 }
 
