@@ -11,11 +11,6 @@
 		CA07D42818116D1F009F7210 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA07D42718116D1F009F7210 /* CoreGraphics.framework */; };
 		CA07D42A18116D1F009F7210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA07D42918116D1F009F7210 /* UIKit.framework */; };
 		CA07D43018116D1F009F7210 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA07D42E18116D1F009F7210 /* InfoPlist.strings */; };
-		CA07D44818116D1F009F7210 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA07D44718116D1F009F7210 /* XCTest.framework */; };
-		CA07D44918116D1F009F7210 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA07D42518116D1F009F7210 /* Foundation.framework */; };
-		CA07D44A18116D1F009F7210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA07D42918116D1F009F7210 /* UIKit.framework */; };
-		CA07D45218116D1F009F7210 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA07D45018116D1F009F7210 /* InfoPlist.strings */; };
-		CA07D45418116D1F009F7210 /* ShopMallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA07D45318116D1F009F7210 /* ShopMallTests.m */; };
 		CA07D46018116F04009F7210 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA07D45D18116F04009F7210 /* main.m */; };
 		CA07D46A18116F13009F7210 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA07D46718116F13009F7210 /* AppDelegate.m */; };
 		CA07D46B18116F13009F7210 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA07D46918116F13009F7210 /* MainTabBarController.m */; };
@@ -332,7 +327,6 @@
 		CAC1FDDC18117A4800F7D1C4 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC1FDCD18117A4800F7D1C4 /* CoreDataManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CAC1FDDD18117A4800F7D1C4 /* DrPalmGateWayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC1FDD018117A4800F7D1C4 /* DrPalmGateWayManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CAC1FDDE18117A4800F7D1C4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC1FDD318117A4800F7D1C4 /* BaseViewController.m */; };
-		CAC1FDE218117CCA00F7D1C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA07D45018116D1F009F7210 /* InfoPlist.strings */; };
 		CAC1FDEF18117E7900F7D1C4 /* MITMobileServerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC1FDE718117E7900F7D1C4 /* MITMobileServerConfiguration.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CAC1FDF218117E7900F7D1C4 /* UIKit+MITAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC1FDED18117E7900F7D1C4 /* UIKit+MITAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CAD2D04D187F8EA7009E93FF /* ShopNewsDownloadSmsFinishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD2D04B187F8EA7009E93FF /* ShopNewsDownloadSmsFinishViewController.m */; };
@@ -456,13 +450,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CA07D44B18116D1F009F7210 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA07D41A18116D1F009F7210 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CA07D42118116D1F009F7210;
-			remoteInfo = ShopMall;
-		};
 		CA07D47318116F75009F7210 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA07D46F18116F75009F7210 /* CommonWidget.xcodeproj */;
@@ -513,11 +500,7 @@
 		CA07D42718116D1F009F7210 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CA07D42918116D1F009F7210 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CA07D42F18116D1F009F7210 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CA07D44618116D1F009F7210 /* ShopMallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopMallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA07D44718116D1F009F7210 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		CA07D44F18116D1F009F7210 /* ShopMallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShopMallTests-Info.plist"; sourceTree = "<group>"; };
-		CA07D45118116D1F009F7210 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CA07D45318116D1F009F7210 /* ShopMallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopMallTests.m; sourceTree = "<group>"; };
 		CA07D45D18116F04009F7210 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Support/main.m; sourceTree = "<group>"; };
 		CA07D45F18116F04009F7210 /* ShopMall-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ShopMall-Prefix.pch"; path = "Support/ShopMall-Prefix.pch"; sourceTree = "<group>"; };
 		CA07D46618116F13009F7210 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -550,16 +533,6 @@
 		CA07D4AC1811744A009F7210 /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
 		CA07D4AE1811750D009F7210 /* ShopMall-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ShopMall-Info.plist"; sourceTree = "<group>"; };
 		CA07D4C2181178FC009F7210 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		CA0B00A61883830B00263C21 /* TestTargetProduct-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestTargetProduct-Info.plist"; sourceTree = "<group>"; };
-		CA0B00A81883830B00263C21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CA0B00AA1883830B00263C21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CA0B00AC1883830B00263C21 /* TestTargetProduct-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestTargetProduct-Prefix.pch"; sourceTree = "<group>"; };
-		CA0B00AD1883830B00263C21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CA0B00AE1883830B00263C21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CA0B00B01883830B00263C21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CA0B00BE1883830C00263C21 /* TestTargetProductTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestTargetProductTests-Info.plist"; sourceTree = "<group>"; };
-		CA0B00C01883830C00263C21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CA0B00C21883830C00263C21 /* TestTargetProductTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTargetProductTests.m; sourceTree = "<group>"; };
 		CA17DE1718129654006F5C86 /* ShopNewsMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopNewsMainViewController.m; sourceTree = "<group>"; };
 		CA17DE19181296BA006F5C86 /* ShopNewsMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopNewsMainViewController.h; sourceTree = "<group>"; };
 		CA17DE261812CF3C006F5C86 /* ShopNewsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopNewsTableView.h; sourceTree = "<group>"; };
@@ -881,7 +854,6 @@
 		CA9ED0031865768B00F62839 /* MoreModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreModule.h; sourceTree = "<group>"; };
 		CA9ED0041865768B00F62839 /* MoreModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreModule.m; sourceTree = "<group>"; };
 		CA9ED00A186579CD00F62839 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		CA9ED00B186579CD00F62839 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		CA9ED00C18657A6200F62839 /* ShopCategoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCategoryManager.h; sourceTree = "<group>"; };
 		CA9ED00D18657A6200F62839 /* ShopCategoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCategoryManager.m; sourceTree = "<group>"; };
 		CA9ED00F18657A8E00F62839 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -1187,16 +1159,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA07D44318116D1F009F7210 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA07D44818116D1F009F7210 /* XCTest.framework in Frameworks */,
-				CA07D44A18116D1F009F7210 /* UIKit.framework in Frameworks */,
-				CA07D44918116D1F009F7210 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -1207,9 +1169,6 @@
 				CA07D47518116F7E009F7210 /* NetworkWidget.xcodeproj */,
 				CA07D46F18116F75009F7210 /* CommonWidget.xcodeproj */,
 				CA07D42B18116D1F009F7210 /* ShopMall */,
-				CA07D44D18116D1F009F7210 /* ShopMallTests */,
-				CA0B00A41883830B00263C21 /* TestTargetProduct */,
-				CA0B00BC1883830B00263C21 /* TestTargetProductTests */,
 				CA07D42418116D1F009F7210 /* Frameworks */,
 				CA07D42318116D1F009F7210 /* Products */,
 			);
@@ -1219,7 +1178,6 @@
 			isa = PBXGroup;
 			children = (
 				CA07D42218116D1F009F7210 /* ShopMall.app */,
-				CA07D44618116D1F009F7210 /* ShopMallTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1269,24 +1227,6 @@
 				CA07D42E18116D1F009F7210 /* InfoPlist.strings */,
 				CA07D45D18116F04009F7210 /* main.m */,
 				CA07D45F18116F04009F7210 /* ShopMall-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CA07D44D18116D1F009F7210 /* ShopMallTests */ = {
-			isa = PBXGroup;
-			children = (
-				CA07D45318116D1F009F7210 /* ShopMallTests.m */,
-				CA07D44E18116D1F009F7210 /* Supporting Files */,
-			);
-			path = ShopMallTests;
-			sourceTree = "<group>";
-		};
-		CA07D44E18116D1F009F7210 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CA07D44F18116D1F009F7210 /* ShopMallTests-Info.plist */,
-				CA07D45018116D1F009F7210 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1439,46 +1379,6 @@
 				CA4562D9187A8CC400ACAB01 /* tabbar-background@2x.png */,
 			);
 			path = tabbar;
-			sourceTree = "<group>";
-		};
-		CA0B00A41883830B00263C21 /* TestTargetProduct */ = {
-			isa = PBXGroup;
-			children = (
-				CA0B00AD1883830B00263C21 /* AppDelegate.h */,
-				CA0B00AE1883830B00263C21 /* AppDelegate.m */,
-				CA0B00B01883830B00263C21 /* Images.xcassets */,
-				CA0B00A51883830B00263C21 /* Supporting Files */,
-			);
-			path = TestTargetProduct;
-			sourceTree = "<group>";
-		};
-		CA0B00A51883830B00263C21 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CA0B00A61883830B00263C21 /* TestTargetProduct-Info.plist */,
-				CA0B00A71883830B00263C21 /* InfoPlist.strings */,
-				CA0B00AA1883830B00263C21 /* main.m */,
-				CA0B00AC1883830B00263C21 /* TestTargetProduct-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CA0B00BC1883830B00263C21 /* TestTargetProductTests */ = {
-			isa = PBXGroup;
-			children = (
-				CA0B00C21883830C00263C21 /* TestTargetProductTests.m */,
-				CA0B00BD1883830B00263C21 /* Supporting Files */,
-			);
-			path = TestTargetProductTests;
-			sourceTree = "<group>";
-		};
-		CA0B00BD1883830B00263C21 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CA0B00BE1883830C00263C21 /* TestTargetProductTests-Info.plist */,
-				CA0B00BF1883830C00263C21 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CA17DE1518129654006F5C86 /* ShopNews */ = {
@@ -2341,24 +2241,6 @@
 			productReference = CA07D42218116D1F009F7210 /* ShopMall.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CA07D44518116D1F009F7210 /* ShopMallTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CA07D45A18116D1F009F7210 /* Build configuration list for PBXNativeTarget "ShopMallTests" */;
-			buildPhases = (
-				CA07D44218116D1F009F7210 /* Sources */,
-				CA07D44318116D1F009F7210 /* Frameworks */,
-				CA07D44418116D1F009F7210 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CA07D44C18116D1F009F7210 /* PBXTargetDependency */,
-			);
-			name = ShopMallTests;
-			productName = ShopMallTests;
-			productReference = CA07D44618116D1F009F7210 /* ShopMallTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2370,9 +2252,6 @@
 				TargetAttributes = {
 					CA07D42118116D1F009F7210 = {
 						DevelopmentTeam = 6VFF87F6P5;
-					};
-					CA07D44518116D1F009F7210 = {
-						TestTargetID = CA07D42118116D1F009F7210;
 					};
 				};
 			};
@@ -2405,7 +2284,6 @@
 			projectRoot = "";
 			targets = (
 				CA07D42118116D1F009F7210 /* ShopMall */,
-				CA07D44518116D1F009F7210 /* ShopMallTests */,
 			);
 		};
 /* End PBXProject section */
@@ -2459,7 +2337,6 @@
 				CA9D62581865979F000C56EE /* credit-list-cell-background@2x.png in Resources */,
 				CA490385186AB49300CF3393 /* detail-cell-guide.png in Resources */,
 				CAC17E7718680AAE00594AD6 /* common-rank-selector-selected@2x.png in Resources */,
-				CAC1FDE218117CCA00F7D1C4 /* InfoPlist.strings in Resources */,
 				CAD2D077187FDA40009E93FF /* NewsDetailVericodeImageCell.xib in Resources */,
 				CAC17E641868052100594AD6 /* ShopTableViewCell.xib in Resources */,
 				CA3ED5FD1886540000C6905D /* RegisterEmailCell.xib in Resources */,
@@ -2690,14 +2567,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA07D44418116D1F009F7210 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA07D45218116D1F009F7210 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -2880,22 +2749,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA07D44218116D1F009F7210 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA07D45418116D1F009F7210 /* ShopMallTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CA07D44C18116D1F009F7210 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CA07D42118116D1F009F7210 /* ShopMall */;
-			targetProxy = CA07D44B18116D1F009F7210 /* PBXContainerItemProxy */;
-		};
 		CA07D4B7181178CC009F7210 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = UIWidget;
@@ -2919,31 +2775,6 @@
 			children = (
 				CA07D42F18116D1F009F7210 /* en */,
 				CA9ED00A186579CD00F62839 /* zh-Hans */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CA07D45018116D1F009F7210 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA07D45118116D1F009F7210 /* en */,
-				CA9ED00B186579CD00F62839 /* zh-Hans */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CA0B00A71883830B00263C21 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA0B00A81883830B00263C21 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CA0B00BF1883830C00263C21 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA0B00C01883830C00263C21 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -3105,48 +2936,6 @@
 			};
 			name = Release;
 		};
-		CA07D45B18116D1F009F7210 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ShopMall.app/ShopMall";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ShopMall/ShopMall-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ShopMallTests/ShopMallTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		CA07D45C18116D1F009F7210 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ShopMall.app/ShopMall";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ShopMall/ShopMall-Prefix.pch";
-				INFOPLIST_FILE = "ShopMallTests/ShopMallTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3164,15 +2953,6 @@
 			buildConfigurations = (
 				CA07D45818116D1F009F7210 /* Debug */,
 				CA07D45918116D1F009F7210 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CA07D45A18116D1F009F7210 /* Build configuration list for PBXNativeTarget "ShopMallTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CA07D45B18116D1F009F7210 /* Debug */,
-				CA07D45C18116D1F009F7210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
