@@ -119,7 +119,7 @@ typedef enum {
     
     // 详细内容
     dictionary = [NSMutableDictionary dictionary];
-    stringText = self.item.smsinfo;
+    stringText = self.item.infoDes;
     viewSize = CGSizeMake(_tableView.frame.size.width, [NewsDetailInfoCell cellHeight:self.tableView detailString:stringText]);
     rowSize = [NSValue valueWithCGSize:viewSize];
     [dictionary setValue:rowSize forKey:ROW_SIZE];
@@ -246,7 +246,7 @@ typedef enum {
                 NewsDetailInfoCell *cell = [NewsDetailInfoCell getUITableViewCell:tableView];
                 result = cell;
                 
-                cell.detailLabel.text = self.item.smsinfo;
+                cell.detailLabel.text = self.item.infoDes;
             }break;
             case RowTypeDate:{
                 // 有效期

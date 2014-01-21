@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 #import "ShopPersonalNewsTableView.h"
 @interface MemberShopNewsListViewController : BaseViewController
+@property (nonatomic, weak) IBOutlet KKButtonBar *kkButtonBar;
 @property (nonatomic, weak) IBOutlet ShopPersonalNewsTableView *tableView;
 @end

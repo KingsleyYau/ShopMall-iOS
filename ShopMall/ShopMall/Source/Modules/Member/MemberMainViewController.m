@@ -153,7 +153,14 @@ typedef enum {
     else {
         
         barButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(registAction:)];
-        barButtonItem.tintColor = [UIColor whiteColor];
+        
+        if(NSOrderedAscending == [[[UIDevice currentDevice] systemVersion] compare:@"7.0"]) {
+            // ios 7 before
+        }
+        else {
+            barButtonItem.tintColor = [UIColor whiteColor];
+        }
+        
         [array addObject:barButtonItem];
     }
     self.navigationItem.rightBarButtonItems = array;

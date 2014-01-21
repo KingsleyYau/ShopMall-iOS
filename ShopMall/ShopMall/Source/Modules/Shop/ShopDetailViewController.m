@@ -13,6 +13,8 @@
 #import "ShopSignListViewController.h"
 #import "ShopCommentListViewController.h"
 #import "ShopPhotoListViewController.h"
+#import "ShopInfoListViewController.h"
+#import "ShopTrafficViewController.h"
 
 #import "ShopCommitPhotoViewController.h"
 #import "ShopCommitSignViewController.h"
@@ -468,6 +470,12 @@ typedef enum {
         // TODO:类型
         RowType type = (RowType)[[dictionarry valueForKey:ROW_TYPE] intValue];
         switch (type) {
+            case RowTypeInfo:{
+                // 资讯
+                ShopInfoListViewController *vc = [[ShopInfoListViewController alloc] initWithNibName:nil bundle:nil];
+                vc.item = self.item;
+                [nvc pushViewController:vc animated:YES gesture:YES];
+            }break;
             case RowTypeAddress:{
                 // 地址
                 ShopMapViewController *vc = [[ShopMapViewController alloc] initWithNibName:nil bundle:nil];
@@ -502,13 +510,13 @@ typedef enum {
             }break;
             case RowTypeTraffic:{
                 // 交通
+                ShopTrafficViewController *vc = [[ShopTrafficViewController alloc] initWithNibName:nil bundle:nil];
+                vc.item = self.item;
+                [nvc pushViewController:vc animated:YES gesture:YES];
             }break;
             case RowTypeNear:{
                 // 周边商户
                 [self.navigationController popViewControllerAnimated:YES];
-            }break;
-            case RowTypeInfo:{
-                
             }break;
             default:break;
         }

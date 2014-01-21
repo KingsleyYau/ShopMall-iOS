@@ -350,6 +350,14 @@
 		CAD2D07A187FDBA2009E93FF /* ShopPersonalNewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD2D079187FDBA2009E93FF /* ShopPersonalNewsTableView.m */; };
 		CAD2D084187FF801009E93FF /* ShopMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD2D082187FF801009E93FF /* ShopMapViewController.m */; };
 		CAD2D085187FF801009E93FF /* ShopMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD2D083187FF801009E93FF /* ShopMapViewController.xib */; };
+		CAE8D545188D751C004FE91A /* ShopTrafficViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8D543188D751C004FE91A /* ShopTrafficViewController.m */; };
+		CAE8D546188D751C004FE91A /* ShopTrafficViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE8D544188D751C004FE91A /* ShopTrafficViewController.xib */; };
+		CAEB8DD3188E0D6E003BA961 /* DetailTrafficCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB8DD1188E0D6E003BA961 /* DetailTrafficCell.m */; };
+		CAEB8DD4188E0D6E003BA961 /* DetailTrafficCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB8DD2188E0D6E003BA961 /* DetailTrafficCell.xib */; };
+		CAEB8DD8188E14BB003BA961 /* CommonTitleDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB8DD6188E14BB003BA961 /* CommonTitleDetailTableViewCell.m */; };
+		CAEB8DD9188E14BB003BA961 /* CommonTitleDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB8DD7188E14BB003BA961 /* CommonTitleDetailTableViewCell.xib */; };
+		CAEB8DDD188E1F32003BA961 /* ShopInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB8DDB188E1F32003BA961 /* ShopInfoListViewController.m */; };
+		CAEB8DDE188E1F32003BA961 /* ShopInfoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB8DDC188E1F32003BA961 /* ShopInfoListViewController.xib */; };
 		CAEDBAF31876533C00C0F0DF /* DetailSepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEDBAF11876533C00C0F0DF /* DetailSepCell.m */; };
 		CAEDBAF41876533C00C0F0DF /* DetailSepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEDBAF21876533C00C0F0DF /* DetailSepCell.xib */; };
 		CAEDBAF71876597200C0F0DF /* MemberMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEDBAF61876597200C0F0DF /* MemberMainViewController.m */; };
@@ -987,6 +995,18 @@
 		CAD2D081187FF801009E93FF /* ShopMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopMapViewController.h; sourceTree = "<group>"; };
 		CAD2D082187FF801009E93FF /* ShopMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopMapViewController.m; sourceTree = "<group>"; };
 		CAD2D083187FF801009E93FF /* ShopMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopMapViewController.xib; sourceTree = "<group>"; };
+		CAE8D542188D751C004FE91A /* ShopTrafficViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopTrafficViewController.h; sourceTree = "<group>"; };
+		CAE8D543188D751C004FE91A /* ShopTrafficViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopTrafficViewController.m; sourceTree = "<group>"; };
+		CAE8D544188D751C004FE91A /* ShopTrafficViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopTrafficViewController.xib; sourceTree = "<group>"; };
+		CAEB8DD0188E0D6E003BA961 /* DetailTrafficCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTrafficCell.h; sourceTree = "<group>"; };
+		CAEB8DD1188E0D6E003BA961 /* DetailTrafficCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTrafficCell.m; sourceTree = "<group>"; };
+		CAEB8DD2188E0D6E003BA961 /* DetailTrafficCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTrafficCell.xib; sourceTree = "<group>"; };
+		CAEB8DD5188E14BB003BA961 /* CommonTitleDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTitleDetailTableViewCell.h; sourceTree = "<group>"; };
+		CAEB8DD6188E14BB003BA961 /* CommonTitleDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTitleDetailTableViewCell.m; sourceTree = "<group>"; };
+		CAEB8DD7188E14BB003BA961 /* CommonTitleDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonTitleDetailTableViewCell.xib; sourceTree = "<group>"; };
+		CAEB8DDA188E1F32003BA961 /* ShopInfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopInfoListViewController.h; sourceTree = "<group>"; };
+		CAEB8DDB188E1F32003BA961 /* ShopInfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopInfoListViewController.m; sourceTree = "<group>"; };
+		CAEB8DDC188E1F32003BA961 /* ShopInfoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopInfoListViewController.xib; sourceTree = "<group>"; };
 		CAEDBAF01876533C00C0F0DF /* DetailSepCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailSepCell.h; sourceTree = "<group>"; };
 		CAEDBAF11876533C00C0F0DF /* DetailSepCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailSepCell.m; sourceTree = "<group>"; };
 		CAEDBAF21876533C00C0F0DF /* DetailSepCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailSepCell.xib; sourceTree = "<group>"; };
@@ -1450,6 +1470,9 @@
 		CA17DE2F1812CF4B006F5C86 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				CAEB8DD5188E14BB003BA961 /* CommonTitleDetailTableViewCell.h */,
+				CAEB8DD6188E14BB003BA961 /* CommonTitleDetailTableViewCell.m */,
+				CAEB8DD7188E14BB003BA961 /* CommonTitleDetailTableViewCell.xib */,
 				CA3ED628188665EB00C6905D /* CenteralDetailTextTableViewCell.h */,
 				CA3ED629188665EB00C6905D /* CenteralDetailTextTableViewCell.m */,
 				CA3ED62A188665EB00C6905D /* CenteralDetailTextTableViewCell.xib */,
@@ -1852,6 +1875,9 @@
 		CAC17E60186804FB00594AD6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				CAEB8DD0188E0D6E003BA961 /* DetailTrafficCell.h */,
+				CAEB8DD1188E0D6E003BA961 /* DetailTrafficCell.m */,
+				CAEB8DD2188E0D6E003BA961 /* DetailTrafficCell.xib */,
 				CA4562C5187A7ECC00ACAB01 /* CommentTableViewCell.h */,
 				CA4562C6187A7ECC00ACAB01 /* CommentTableViewCell.m */,
 				CA4562C7187A7ECC00ACAB01 /* CommentTableViewCell.xib */,
@@ -2018,6 +2044,9 @@
 				CAF7EF24187E6E7900FC46EF /* ShopCommitSignViewController.h */,
 				CAF7EF25187E6E7900FC46EF /* ShopCommitSignViewController.m */,
 				CAF7EF26187E6E7900FC46EF /* ShopCommitSignViewController.xib */,
+				CAEB8DDA188E1F32003BA961 /* ShopInfoListViewController.h */,
+				CAEB8DDB188E1F32003BA961 /* ShopInfoListViewController.m */,
+				CAEB8DDC188E1F32003BA961 /* ShopInfoListViewController.xib */,
 				CAF7EF27187E6E7900FC46EF /* ShopPhotoDetailViewController.h */,
 				CAF7EF28187E6E7900FC46EF /* ShopPhotoDetailViewController.m */,
 				CAF7EF29187E6E7900FC46EF /* ShopPhotoDetailViewController.xib */,
@@ -2181,6 +2210,9 @@
 		CAF80568181521280028B77E /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				CAE8D542188D751C004FE91A /* ShopTrafficViewController.h */,
+				CAE8D543188D751C004FE91A /* ShopTrafficViewController.m */,
+				CAE8D544188D751C004FE91A /* ShopTrafficViewController.xib */,
 				CAF7EF17187E6E7900FC46EF /* Detail */,
 				CA9ED00C18657A6200F62839 /* ShopCategoryManager.h */,
 				CA9ED00D18657A6200F62839 /* ShopCategoryManager.m */,
@@ -2319,6 +2351,7 @@
 			files = (
 				CAC17E71186807BD00594AD6 /* list-gift@2x.png in Resources */,
 				CA9F4EFD181AB9C200FFEFA6 /* category-search-logo.png in Resources */,
+				CAEB8DD9188E14BB003BA961 /* CommonTitleDetailTableViewCell.xib in Resources */,
 				CAC17E6E186807BD00594AD6 /* list-discount.png in Resources */,
 				CA4562BD187A54F600ACAB01 /* sign-detail-background.png in Resources */,
 				CA34B7B6187C01E5008540A8 /* photo-buttonbar-item@2x.png in Resources */,
@@ -2419,6 +2452,7 @@
 				CA3A78F1186C1C3100673BF0 /* DetailSignCell.xib in Resources */,
 				CA505C4A187D43C7005E9E5C /* rank-buttonbar-item-selected.png in Resources */,
 				CA3ED602188654C200C6905D /* member-cell-register-checkcode-button.png in Resources */,
+				CAEB8DDE188E1F32003BA961 /* ShopInfoListViewController.xib in Resources */,
 				CA9ECFE41865673D00F62839 /* category-hyf@2x.png in Resources */,
 				CA9D624518658AED000C56EE /* navigation-image-main-logo.png in Resources */,
 				CA4562F3187A8D0E00ACAB01 /* detail-tabbar-comment@2x.png in Resources */,
@@ -2427,6 +2461,7 @@
 				CAF7EF58187E7C3800FC46EF /* ShopRegionViewController.xib in Resources */,
 				CAF7EF53187E7AFB00FC46EF /* ShopCategoryViewController.xib in Resources */,
 				CA07D4A218117440009F7210 /* tab-member-unselected.png in Resources */,
+				CAE8D546188D751C004FE91A /* ShopTrafficViewController.xib in Resources */,
 				CAA4DAF0186936F5007A8B07 /* list-distance-selected-1.png in Resources */,
 				CAA4DAF1186936F5007A8B07 /* list-distance-selected-2.png in Resources */,
 				CAD2D068187FD028009E93FF /* MemberCommentListViewController.xib in Resources */,
@@ -2498,6 +2533,7 @@
 				CA9D624D18658B40000C56EE /* main-toolbar-area-button@2x.png in Resources */,
 				CA07D49E18117440009F7210 /* tab-more-unselected.png in Resources */,
 				CA07D49F18117440009F7210 /* tab-more-unselected@2x.png in Resources */,
+				CAEB8DD4188E0D6E003BA961 /* DetailTrafficCell.xib in Resources */,
 				CAA4DB6118697D54007A8B07 /* self-annotation.png in Resources */,
 				CAC17E571867E6B700594AD6 /* navigation-back-button@2x.png in Resources */,
 				CA4562F8187A8D0E00ACAB01 /* detail-tabbar-upload-selected.png in Resources */,
@@ -2604,6 +2640,7 @@
 				CA3ED6161886571800C6905D /* RegisterPassword2Cell.m in Sources */,
 				CA17DE401812CF4B006F5C86 /* CommonListTableViewCell.m in Sources */,
 				CAF7EF83187E978700FC46EF /* ShopNewsDownloadSmsViewController.m in Sources */,
+				CAEB8DD3188E0D6E003BA961 /* DetailTrafficCell.m in Sources */,
 				CA17DE421812CF4B006F5C86 /* CommonListTextTableViewCell.m in Sources */,
 				CA17DEAE1812D0E8006F5C86 /* Sign.m in Sources */,
 				CAC1FDEF18117E7900F7D1C4 /* MITMobileServerConfiguration.m in Sources */,
@@ -2648,6 +2685,7 @@
 				CA34B78B187B9C91008540A8 /* PhotoTableView.m in Sources */,
 				CAD2D058187F96F0009E93FF /* MemberShopNewsListViewController.m in Sources */,
 				CAC17E501867DD0900594AD6 /* ShopCityViewController.m in Sources */,
+				CAEB8DD8188E14BB003BA961 /* CommonTitleDetailTableViewCell.m in Sources */,
 				CAD2D067187FD028009E93FF /* MemberCommentListViewController.m in Sources */,
 				CA9ECFED18656CEF00F62839 /* EBabyModule.m in Sources */,
 				CA49035E186AA6D200CF3393 /* ShopDetailViewController.m in Sources */,
@@ -2660,6 +2698,7 @@
 				CA9D623418657F21000C56EE /* CommonTableViewCell.m in Sources */,
 				CAA4DB0A18696571007A8B07 /* CallOutAnnotationView.m in Sources */,
 				CA17DEA21812D0E8006F5C86 /* Custom.m in Sources */,
+				CAEB8DDD188E1F32003BA961 /* ShopInfoListViewController.m in Sources */,
 				CA17DEA61812D0E8006F5C86 /* Region.m in Sources */,
 				CAF7EF5C187E7F7800FC46EF /* ShopCreditViewController.m in Sources */,
 				CAD2D076187FDA40009E93FF /* NewsDetailVericodeImageCell.m in Sources */,
@@ -2719,6 +2758,7 @@
 				CA17DECA1812D0E8006F5C86 /* CurrentInfo.m in Sources */,
 				CA9ED0051865768B00F62839 /* MemberModule.m in Sources */,
 				CA505C29187CFAFF005E9E5C /* PhotoNameCell.m in Sources */,
+				CAE8D545188D751C004FE91A /* ShopTrafficViewController.m in Sources */,
 				CAF7EF7E187E93DB00FC46EF /* NewsDetailDescCell.m in Sources */,
 				CA17DEC81812D0E8006F5C86 /* CurrentInfoCustom.m in Sources */,
 				CAA4DB0918696571007A8B07 /* ShopMapAnnotation.m in Sources */,
@@ -2894,7 +2934,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E9BB4864-05E4-4776-A990-DAF5E19F94FC";
+				PROVISIONING_PROFILE = "8B6170B0-B64E-4B5E-89CA-942D1EE85A98";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../Modules/\"/** \"$(SRCROOT)/ShopMall/Source/Header\" \"$(SRCROOT)/ShopMall/Source/Extern/MAMapKit/Headers/\" \"$(SRCROOT)/ShopMall/Source/Extern/MASearchKit/Headers/\"";
 				WRAPPER_EXTENSION = app;
@@ -2929,7 +2969,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E9BB4864-05E4-4776-A990-DAF5E19F94FC";
+				PROVISIONING_PROFILE = "8B6170B0-B64E-4B5E-89CA-942D1EE85A98";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../Modules/\"/** \"$(SRCROOT)/ShopMall/Source/Header\" \"$(SRCROOT)/ShopMall/Source/Extern/MAMapKit/Headers/\" \"$(SRCROOT)/ShopMall/Source/Extern/MASearchKit/Headers/\"";
 				WRAPPER_EXTENSION = app;

@@ -19,7 +19,7 @@
     NSInteger height;
     height = 23;
     if(detailString) {
-        height += [detailString sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(tableView.frame.size.width * 0.75, MAXFLOAT)
+        height += [detailString sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(tableView.frame.size.width * 0.9375, MAXFLOAT)
                                lineBreakMode:NSLineBreakByCharWrapping].height;
     }
     return height;

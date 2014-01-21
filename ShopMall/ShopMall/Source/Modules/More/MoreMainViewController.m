@@ -42,6 +42,10 @@ typedef enum {
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [self reloadData:YES];
 }
 - (void)didReceiveMemoryWarning
@@ -178,23 +182,29 @@ typedef enum {
         RowType type = (RowType)[[dictionarry valueForKey:ROW_TYPE] intValue];
         switch (type) {
             case RowTypeAbout:{
+                cell.detailLabel.numberOfLines = 0;
                 cell.detailLabel.text = @"Shopla的成立年份，公司背景，成立目标和合作伙伴等。其他简介有待填充，让介绍来得更猛烈些吧。";
             }break;
             case RowTypeVersion:{
                 NSDictionary* infoDict =[[NSBundle mainBundle] infoDictionary];
                 NSString *version =[infoDict objectForKey:@"CFBundleVersion"];
+                cell.detailLabel.numberOfLines = 1;
                 cell.detailLabel.text = [NSString stringWithFormat:@"软件版本：%@", version];
             }break;
             case RowTypePhone:{
+                cell.detailLabel.numberOfLines = 1;
                 cell.detailLabel.text = @"客服电话：020-88888888";
             }break;
             case RowTypeLink:{
+                cell.detailLabel.numberOfLines = 1;
                 cell.detailLabel.text = @"网址：www.shopla.com";
             }break;
             case RowTypeMapData:{
+                cell.detailLabel.numberOfLines = 1;
                 cell.detailLabel.text = @"下载港澳离线地图";
             }break;
             case RowTypeClean:{
+                cell.detailLabel.numberOfLines = 1;
                 cell.detailLabel.text = @"清除缓存";
             }break;
             default:break;

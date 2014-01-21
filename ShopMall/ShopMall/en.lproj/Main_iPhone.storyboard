@@ -13,9 +13,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="8EH-U6-pbo">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.64705882349999999" green="0.37254901959999998" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.55803571429999999" green="0.32176430519999999" blue="0.02687724251" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.64705882349999999" green="0.37254901959999998" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.5580357142857143" green="0.32176430522000643" blue="0.026877242507814415" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -114,7 +114,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="MainTabBarController" definesPresentationContext="YES" id="UC1-1m-ADN" userLabel="Tab首页" customClass="MainTabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3dz-vT-cES"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" backgroundImage="tabbar-background.png" id="ECx-mn-Pij" customClass="KKTabBar">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>

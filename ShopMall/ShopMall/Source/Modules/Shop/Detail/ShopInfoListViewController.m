@@ -1,19 +1,15 @@
 //
-//  MemberShopNewsListViewController.m
+//  ShopInfoListViewController.m
 //  ShopMall
 //
 //  Created by KingsleyYau on 14-1-6.
 //  Copyright (c) 2014年 KingsleyYau. All rights reserved.
 //
 
-#import "MemberShopNewsListViewController.h"
-#import "MemberShopNewsDetailViewController.h"
+#import "ShopInfoListViewController.h"
+#import "ShopNewsDetailViewController.h"
 
-#define TAG_BUTTON_VALID        1000
-#define TAG_BUTTON_USED         1001
-#define TAG_BUTTON_INVALID      1002
-
-@interface MemberShopNewsListViewController () <ShopRequestOperatorDelegate, EGORefreshTableHeaderDelegate> {
+@interface ShopInfoListViewController () <ShopRequestOperatorDelegate, EGORefreshTableHeaderDelegate> {
     EGORefreshTableHeaderView *_refreshHeaderView;
     
     NSInteger _maxItem;
@@ -21,14 +17,12 @@
     BOOL _hasMore;
     BOOL _reloading;
     NSInteger _totalItems;
-    
-    NSNumber *_curStatus;
 }
 @property (nonatomic, retain) NSArray *items;
 @property (nonatomic, retain) ShopRequestOperator *requestOperator;
 @end
 
-@implementation MemberShopNewsListViewController
+@implementation ShopInfoListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,10 +37,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _curStatus = [NSNumber numberWithInt:1];
     [self resetParam];
     [self setupTableView];
-    [self setupKKButtonBar];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -71,10 +63,10 @@
 - (void)setupNavigationBar {
     [super setupNavigationBar];
 
-    NSString *title = @"我的券券";
+    NSString *title = @"商户资讯";
 
     if(_totalItems > 0) {
-        title = [NSString stringWithFormat:@"我的券券(共%d条)", _totalItems];
+        title = [NSString stringWithFormat:@"商户资讯(共%d条)", _totalItems];
     }
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -85,7 +77,7 @@
     self.navigationItem.titleView = titleLabel;
 }
 - (void)setupTableView {
-    // 列表
+    // 商户列表
     if(!_refreshHeaderView) {
         // 下拉刷新
         _refreshHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0, 0 - _tableView.bounds.size.height, _tableView.frame.size.width, _tableView.bounds.size.height)];
@@ -97,110 +89,9 @@
         [_refreshHeaderView refreshLastUpdatedDate];
     }
 }
-- (void)setupKKButtonBar {
-    [self resetkkButtonBar];
-    self.kkButtonBar.items = [self customButtons];
-    
-    KKImageButton *button = [self.kkButtonBar.items objectAtIndex:[_curStatus intValue] - 1];
-    [button setSelected:YES];
-}
-- (void)resetkkButtonBar {
-    for(KKImageButton *kkButton in _kkButtonBar.items) {
-        [kkButton setSelected:NO];
-    }
-}
-- (NSArray *)customButtons {
-    NSMutableArray *muableArray = [NSMutableArray array];
-    KKImageButton *button;
-    
-    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:ShopListKKButtonBarItemImage ofType:@"png"]];
-    UIImage *imageSelected = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:ShopListKKButtonBarItemSelectedImage ofType:@"png"]];
-    
-    
-    // 可用
-    button = [KKImageButton buttonWithType:UIButtonTypeCustom];
-    [muableArray addObject:button];
-    
-    button.tag = TAG_BUTTON_VALID;
-    button.kkImage = image;
-    button.kkSelectedImage = imageSelected;
-    [button setSelected:NO];
-    
-    [button setTitle:@"可用" forState:(UIControlStateNormal)];
-    button.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 18, 0);
-    button.titleLabel.font = [UIFont systemFontOfSize:13];
-    
-    [button addTarget:self action:@selector(kkButtonBarButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    // 已用
-    button = [KKImageButton buttonWithType:UIButtonTypeCustom];
-    [muableArray addObject:button];
-    
-    button.tag = TAG_BUTTON_USED;
-    button.kkImage = image;
-    button.kkSelectedImage = imageSelected;
-    [button setSelected:NO];
-    
-    [button setTitle:@"已用" forState:(UIControlStateNormal)];
-    button.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 18, 0);
-    button.titleLabel.font = [UIFont systemFontOfSize:13];
-    
-    [button addTarget:self action:@selector(kkButtonBarButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    // 过期
-    button = [KKImageButton buttonWithType:UIButtonTypeCustom];
-    [muableArray addObject:button];
-    
-    button.tag = TAG_BUTTON_INVALID;
-    button.kkImage = image;
-    button.kkSelectedImage = imageSelected;
-    [button setSelected:NO];
-    
-    [button setTitle:@"过期" forState:(UIControlStateNormal)];
-    button.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 18, 0);
-    button.titleLabel.font = [UIFont systemFontOfSize:13];
-    
-    [button addTarget:self action:@selector(kkButtonBarButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    return muableArray;
-}
-#pragma mark - 按钮事件
-- (void)kkButtonBarButtonAction:(id)sender {
-    KKImageButton *button = (KKImageButton *)sender;
-    for(KKImageButton *kkButton in _kkButtonBar.items) {
-        // 取消其他按钮选中状态
-        if(button.tag != kkButton.tag) {
-            [kkButton setSelected:NO];
-        }
-    }
-    // 根据按钮,显示详细界面
-    // 当前按钮不是选中
-    if(!button.selected)
-        return;
-    // 根据按钮,显示详细界面
-    switch (button.tag) {
-        case TAG_BUTTON_VALID:{
-            // 可用
-            _curStatus = [NSNumber numberWithInt:1];
-        }break;
-        case TAG_BUTTON_USED:{
-            // 已用
-            _curStatus = [NSNumber numberWithInt:2];;
-        }break;
-        case TAG_BUTTON_INVALID:{
-            // 过期
-            _curStatus = [NSNumber numberWithInt:3];;
-        }break;
-        default:
-            break;
-    }
-    [self resetParam];
-    [self reloadData:YES];
-    [self loadFromServer:NO];
-}
 #pragma mark - 界面逻辑
 - (void)reloadData:(BOOL)isReloadView {
-    NSArray *array = [ShopDataManager shopPersonalNewsList:_curStatus];
+    NSArray *array = [ShopDataManager shopNewsList:[ShopDataManager currentInfo].cityCurrent.cityID categoryID:nil creditID:nil shopNewsTypeId:nil keyword:nil shopId:self.item.shopID];
     if(array) {
         NSInteger limit = array.count;
         limit = MIN(limit, _maxItem);
@@ -252,8 +143,8 @@
     _hasMore = NO;
     _totalItems = -1;
 }
-#pragma mark - 列表界面回调 (TableViewDelegate)
-- (void)didSelectMore:(ShopPersonalNewsTableView *)tableView {
+#pragma mark - 列表界面回调 (ShopNewsTableViewDelegate)
+- (void)didSelectMore:(ShopNewsTableView *)tableView {
     
     if(IsNetWorkOK) {
         [self loadFromServer:YES];
@@ -263,8 +154,8 @@
     _maxItem += PageMaxRowValue;
     [self reloadData:YES];
 }
-- (void)tableView:(ShopPersonalNewsTableView *)tableView didSelectShopPersonalNews:(ShopPersonalNews *)item {
-    MemberShopNewsDetailViewController *vc = [[MemberShopNewsDetailViewController alloc] initWithNibName:nil bundle:nil];
+- (void)tableView:(ShopNewsTableView *)tableView didSelectShopNews:(ShopNews *)item {
+    ShopNewsDetailViewController *vc = [[ShopNewsDetailViewController alloc] initWithNibName:nil bundle:nil];
     vc.item = item;
     KKNavigationController *nvc = (KKNavigationController *)self.navigationController;
     [nvc pushViewController:vc animated:YES gesture:YES];
@@ -320,18 +211,18 @@
     _loadMore = loadMore;
     if(loadMore) {
         // 加载更多
-        return [self.requestOperator updateMemberShopNewList:_curStatus  curMaxRow:_maxItem];
+        return [self.requestOperator updateShopInfoList:self.item.shopID curMaxRow:_maxItem];
     }
     else {
         // 刷最新
-        return [self.requestOperator updateMemberShopNewList:_curStatus  curMaxRow:0];
+        return [self.requestOperator updateShopInfoList:self.item.shopID curMaxRow:0];
     }
 }
 #pragma mark - 协议回调 (ShopRequestOperatorDelegate)
 - (void)requestFinish:(id)json requestType:(ShopRequestOperatorStatus)type {
     [self cancel];
     switch(type){
-        case ShopRequestOperatorStatus_UpdateMembeShopNewsList:{
+        case ShopRequestOperatorStatus_UpdateShopInfoList:{
             if(_loadMore) {
                 //                // 返回成功,假设已经入库每页最大纪录
                 //                _maxItem += PageMaxRowValue;
@@ -350,8 +241,8 @@
 - (void)requestFail:(NSString*)error requestType:(ShopRequestOperatorStatus)type {
     [self cancel];
     switch(type){
-        case ShopRequestOperatorStatus_UpdateMembeShopNewsList:{
-            [self setTopStatusText:@"获取我的券券失败"];
+        case ShopRequestOperatorStatus_UpdateShopInfoList:{
+            [self setTopStatusText:@"获取商户资讯列表失败"];
             break;
         }
         default:break;

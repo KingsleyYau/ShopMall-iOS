@@ -155,6 +155,7 @@ typedef enum {
         self.kkSearchBar = [[KKSearchBar alloc] initWithFrame:searchFrame];
         self.kkSearchBar.placeholder = @"输入商户名称搜索";
         [self.kkSearchBar setBackgroundImage:nil];
+        self.kkSearchBar.userInteractionEnabled = YES;
     }
 
     if (!self.searchController) {
