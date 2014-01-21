@@ -358,6 +358,8 @@
 		CAEB8DD9188E14BB003BA961 /* CommonTitleDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB8DD7188E14BB003BA961 /* CommonTitleDetailTableViewCell.xib */; };
 		CAEB8DDD188E1F32003BA961 /* ShopInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB8DDB188E1F32003BA961 /* ShopInfoListViewController.m */; };
 		CAEB8DDE188E1F32003BA961 /* ShopInfoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEB8DDC188E1F32003BA961 /* ShopInfoListViewController.xib */; };
+		CAEB8DE2188E25BC003BA961 /* MapDataDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB8DE0188E25BB003BA961 /* MapDataDownloadManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CAEB8DE5188E281F003BA961 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB8DE4188E281F003BA961 /* DownloadManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CAEDBAF31876533C00C0F0DF /* DetailSepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEDBAF11876533C00C0F0DF /* DetailSepCell.m */; };
 		CAEDBAF41876533C00C0F0DF /* DetailSepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEDBAF21876533C00C0F0DF /* DetailSepCell.xib */; };
 		CAEDBAF71876597200C0F0DF /* MemberMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEDBAF61876597200C0F0DF /* MemberMainViewController.m */; };
@@ -1007,6 +1009,10 @@
 		CAEB8DDA188E1F32003BA961 /* ShopInfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopInfoListViewController.h; sourceTree = "<group>"; };
 		CAEB8DDB188E1F32003BA961 /* ShopInfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopInfoListViewController.m; sourceTree = "<group>"; };
 		CAEB8DDC188E1F32003BA961 /* ShopInfoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopInfoListViewController.xib; sourceTree = "<group>"; };
+		CAEB8DE0188E25BB003BA961 /* MapDataDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDataDownloadManager.m; sourceTree = "<group>"; };
+		CAEB8DE1188E25BB003BA961 /* MapDataDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDataDownloadManager.h; sourceTree = "<group>"; };
+		CAEB8DE3188E281F003BA961 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		CAEB8DE4188E281F003BA961 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 		CAEDBAF01876533C00C0F0DF /* DetailSepCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailSepCell.h; sourceTree = "<group>"; };
 		CAEDBAF11876533C00C0F0DF /* DetailSepCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailSepCell.m; sourceTree = "<group>"; };
 		CAEDBAF21876533C00C0F0DF /* DetailSepCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailSepCell.xib; sourceTree = "<group>"; };
@@ -1266,6 +1272,7 @@
 		CA07D46318116F13009F7210 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CAEB8DDF188E25BB003BA961 /* MapOffLineManager */,
 				CAF8053D1814FF4C0028B77E /* Login */,
 				CAC1FDBA18117A4800F7D1C4 /* AppEntitlements */,
 				CAC1FDC918117A4800F7D1C4 /* Core Data */,
@@ -1989,6 +1996,17 @@
 			path = MIT;
 			sourceTree = "<group>";
 		};
+		CAEB8DDF188E25BB003BA961 /* MapOffLineManager */ = {
+			isa = PBXGroup;
+			children = (
+				CAEB8DE3188E281F003BA961 /* DownloadManager.h */,
+				CAEB8DE4188E281F003BA961 /* DownloadManager.m */,
+				CAEB8DE0188E25BB003BA961 /* MapDataDownloadManager.m */,
+				CAEB8DE1188E25BB003BA961 /* MapDataDownloadManager.h */,
+			);
+			path = MapOffLineManager;
+			sourceTree = "<group>";
+		};
 		CAEDBAF818765C8900C0F0DF /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -2611,9 +2629,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA9D62541865917D000C56EE /* ShopNewTypeManager.m in Sources */,
-				CA17DE3C1812CF4B006F5C86 /* CenteralTextTableViewCell.m in Sources */,
 				CAD2D053187F945F009E93FF /* ShopPersonalNews.m in Sources */,
 				CAF7EF39187E6E7900FC46EF /* ShopCommitPhotoViewController.m in Sources */,
+				CA17DE3C1812CF4B006F5C86 /* CenteralTextTableViewCell.m in Sources */,
 				CA07D46A18116F13009F7210 /* AppDelegate.m in Sources */,
 				CA17DEA01812D0E8006F5C86 /* ShopOrder.m in Sources */,
 				CA17DEC71812D0E8006F5C86 /* ShopNewsTypeCustom.m in Sources */,
@@ -2630,6 +2648,7 @@
 				CAC1FDD718117A4800F7D1C4 /* GlobalUIEntitlement.m in Sources */,
 				CA17DEA41812D0E8006F5C86 /* UserCustom.m in Sources */,
 				CAC1FDF218117E7900F7D1C4 /* UIKit+MITAdditions.m in Sources */,
+				CAEB8DE2188E25BC003BA961 /* MapDataDownloadManager.m in Sources */,
 				CAF7EF57187E7C3800FC46EF /* ShopRegionViewController.m in Sources */,
 				CA3A78F0186C1C3100673BF0 /* DetailSignCell.m in Sources */,
 				CA505C33187D01E6005E9E5C /* PhotoPriceCell.m in Sources */,
@@ -2716,6 +2735,7 @@
 				CAF805391814FE690028B77E /* SignInManager.m in Sources */,
 				CA17DEBD1812D0E8006F5C86 /* ShopCategory.m in Sources */,
 				CAF8054C1814FF4C0028B77E /* LoginManager.m in Sources */,
+				CAEB8DE5188E281F003BA961 /* DownloadManager.m in Sources */,
 				CAF7EF3B187E6E7900FC46EF /* ShopCommitSignViewController.m in Sources */,
 				CA17DEB61812D0E8006F5C86 /* ShopNewsType.m in Sources */,
 				CA17DEAC1812D0E8006F5C86 /* ShopNews.m in Sources */,

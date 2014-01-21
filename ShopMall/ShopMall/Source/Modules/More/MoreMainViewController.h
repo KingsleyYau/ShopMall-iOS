@@ -10,4 +10,5 @@
 
 @interface MoreMainViewController : BaseViewController
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UILabel *mapDownloadLabel;
 @end

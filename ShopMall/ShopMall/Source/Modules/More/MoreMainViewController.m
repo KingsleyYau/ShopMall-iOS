@@ -9,6 +9,7 @@
 #import "MoreMainViewController.h"
 
 #import "CenteralDetailTextTableViewCell.h"
+#import "MapDataDownloadManager.h"
 
 typedef enum {
     RowTypeAbout,
@@ -19,8 +20,9 @@ typedef enum {
     RowTypeClean,
 } RowType;
 
-@interface MoreMainViewController ()
+@interface MoreMainViewController () <MapDownloadManagerDelegate>
 @property (nonatomic, strong) NSArray *tableViewArray;
+@property (nonatomic, retain) MapDataDownloadManager *mapDataDownloadManager;
 @end
 
 @implementation MoreMainViewController
@@ -38,6 +40,9 @@ typedef enum {
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.mapDataDownloadManager = [[MapDataDownloadManager alloc] init];
+    self.mapDataDownloadManager.delegate = self;
+    
     self.tableView.backgroundView = nil;
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -182,28 +187,48 @@ typedef enum {
         RowType type = (RowType)[[dictionarry valueForKey:ROW_TYPE] intValue];
         switch (type) {
             case RowTypeAbout:{
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 cell.detailLabel.numberOfLines = 0;
                 cell.detailLabel.text = @"Shopla的成立年份，公司背景，成立目标和合作伙伴等。其他简介有待填充，让介绍来得更猛烈些吧。";
             }break;
             case RowTypeVersion:{
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 NSDictionary* infoDict =[[NSBundle mainBundle] infoDictionary];
                 NSString *version =[infoDict objectForKey:@"CFBundleVersion"];
                 cell.detailLabel.numberOfLines = 1;
                 cell.detailLabel.text = [NSString stringWithFormat:@"软件版本：%@", version];
             }break;
             case RowTypePhone:{
+                cell.selectionStyle = UITableViewCellSelectionStyleGray;
                 cell.detailLabel.numberOfLines = 1;
                 cell.detailLabel.text = @"客服电话：020-88888888";
             }break;
             case RowTypeLink:{
+                cell.selectionStyle = UITableViewCellSelectionStyleGray;
                 cell.detailLabel.numberOfLines = 1;
                 cell.detailLabel.text = @"网址：www.shopla.com";
             }break;
             case RowTypeMapData:{
+                cell.selectionStyle = UITableViewCellSelectionStyleGray;
                 cell.detailLabel.numberOfLines = 1;
-                cell.detailLabel.text = @"下载港澳离线地图";
+                
+                NSString *stringText = @"";
+                if([self.mapDataDownloadManager isDownloadAlready]) {
+                    cell.accessoryType = UITableViewCellAccessoryNone;
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    stringText = @"下载港澳离线地图[已下载]";
+                }
+                else {
+                    cell.accessoryType = UITableViewCellAccessoryNone;
+                    cell.selectionStyle = UITableViewCellSelectionStyleGray;
+                    stringText = @"下载港澳离线地图";
+                }
+                
+                cell.detailLabel.text = stringText;
+                self.mapDownloadLabel = cell.detailLabel;
             }break;
             case RowTypeClean:{
+                cell.selectionStyle = UITableViewCellSelectionStyleGray;
                 cell.detailLabel.numberOfLines = 1;
                 cell.detailLabel.text = @"清除缓存";
             }break;
@@ -214,5 +239,55 @@ typedef enum {
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if([tableView isEqual:self.tableView]) {
+        // 主tableview
+        NSDictionary *dictionarry = [self.tableViewArray objectAtIndex:indexPath.row];
+    
+        // TODO:类型
+        RowType type = (RowType)[[dictionarry valueForKey:ROW_TYPE] intValue];
+        switch (type) {
+            case RowTypeAbout:{
+            }break;
+            case RowTypeVersion:{
+            }break;
+            case RowTypePhone:{
+                if(![UIDevice canDail]) {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"您的设备不能拨号" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                    [alert show];
+                }
+                else {
+                    NSString *stringPhone = [NSString stringWithFormat:@"tel://%@", @"020-88888888"];
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:stringPhone]];
+                }
+            }break;
+            case RowTypeLink:{
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+            }break;
+            case RowTypeMapData:{
+                if(![self.mapDataDownloadManager isDownloadAlready]) {
+                    [self.mapDataDownloadManager startDownload];
+                }
+            }break;
+            case RowTypeClean:{
+                [ShopDataManager clearDataBase];
+            }break;
+            default:break;
+        }
+    }
+}
+#pragma mark 离线地图下载回调
+- (void)downloadFinish:(MapDataDownloadManager*)mapDownloadManager {
+    [self reloadData:YES];
+}
+- (void)downloadFail:(MapDataDownloadManager*)mapDownloadManager error:(NSString*)error {
+    // 弹出提示
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"" message:@"下载失败,请重新下载"/*LocationError*/ delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alert show];
+    [self reloadData:YES];
+}
+- (void)downloadProcess:(MapDataDownloadManager*)mapeDownloadManager processed:(NSInteger)processed total:(NSInteger)total {
+    self.mapDownloadLabel.text = [NSString stringWithFormat:@"下载港澳离线地图[已经下载%d%%]", (NSInteger)(100 * processed / total)];
+    [self.mapDownloadLabel sizeToFit];
 }
 @end
