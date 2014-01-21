@@ -262,7 +262,7 @@ typedef enum {
                 }
             }break;
             case RowTypeLink:{
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.shopla.com"]];
             }break;
             case RowTypeMapData:{
                 if(![self.mapDataDownloadManager isDownloadAlready]) {
