@@ -57,18 +57,35 @@
 - (void)setupMapView {
     [super setupMapView];
     self.mapView.showsUserLocation = YES;
+    self.mapView.hidden = NO;
     [self.mapView addObserver:self forKeyPath:@"showsUserLocation" options:NSKeyValueObservingOptionNew context:nil];
     [self setAnnotions];
 }
 - (void)setupNavigationBar {
     [super setupNavigationBar];
     
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.text = @"商户地址";
+    [titleLabel sizeToFit];
+    self.navigationItem.titleView = titleLabel;
+    
     // 右边按钮
     NSMutableArray *array = [NSMutableArray array];
     UIBarButtonItem *barButtonItem = nil;
     
     barButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"导航" style:UIBarButtonItemStylePlain target:self action:@selector(guideAction:)];
+    
+    if(NSOrderedAscending == [[[UIDevice currentDevice] systemVersion] compare:@"7.0"]) {
+        // ios 7 before
+    }
+    else {
+        barButtonItem.tintColor = [UIColor whiteColor];
+    }
+    
     [array addObject:barButtonItem];
+    self.navigationItem.rightBarButtonItems = array;
 }
 - (void)setAnnotions {
     // 根据当前位置显示位置
@@ -156,6 +173,7 @@
         }
         ShopAnnotationCell *cell = (ShopAnnotationCell *)[annotationView.contentView viewWithTag:TAG_VIEW_SHOPCELL];
         
+        cell.accessoryView.hidden = YES;
         cell.titleLabel.text = self.item.shopName;
         cell.kkRankSelector.curRank = [self.item.score integerValue] / RankOfScore;
         NSString *detail = [NSString stringWithFormat:@"%@ %@", self.item.address, self.item.category.categoryName];

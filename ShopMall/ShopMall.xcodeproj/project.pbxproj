@@ -2210,9 +2210,6 @@
 		CAF80568181521280028B77E /* Shop */ = {
 			isa = PBXGroup;
 			children = (
-				CAE8D542188D751C004FE91A /* ShopTrafficViewController.h */,
-				CAE8D543188D751C004FE91A /* ShopTrafficViewController.m */,
-				CAE8D544188D751C004FE91A /* ShopTrafficViewController.xib */,
 				CAF7EF17187E6E7900FC46EF /* Detail */,
 				CA9ED00C18657A6200F62839 /* ShopCategoryManager.h */,
 				CA9ED00D18657A6200F62839 /* ShopCategoryManager.m */,
@@ -2245,6 +2242,9 @@
 				CAF7EF45187E70E200FC46EF /* ShopSearchViewController.h */,
 				CAF7EF46187E70E200FC46EF /* ShopSearchViewController.m */,
 				CAF7EF47187E70E200FC46EF /* ShopSearchViewController.xib */,
+				CAE8D542188D751C004FE91A /* ShopTrafficViewController.h */,
+				CAE8D543188D751C004FE91A /* ShopTrafficViewController.m */,
+				CAE8D544188D751C004FE91A /* ShopTrafficViewController.xib */,
 				CAC17E5C1868046600594AD6 /* View */,
 			);
 			path = Shop;
