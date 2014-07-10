@@ -7,6 +7,7 @@
 //
 
 #import "NSURL+FileAttribute.h"
+#import <sys/xattr.h>
 
 @implementation NSURL(FileAttribute)
 - (BOOL)addSkipBackupAttribute {
